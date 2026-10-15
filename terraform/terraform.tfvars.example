@@ -3,5 +3,5 @@
 region       = "ap-south-1"
 project_name = "helpdesk"
 
-# node_instance_types = ["t3.medium"]
+# node_instance_types = ["t3.medium"]   # free-tier accounts: use e.g. ["m7i-flex.large"]
 # node_desired_size   = 2
