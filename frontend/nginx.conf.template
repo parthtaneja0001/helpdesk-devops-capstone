@@ -1,0 +1,22 @@
+server {
+    listen 8080;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # API calls are proxied to the backend (BACKEND_URL is injected at container start)
+    location /api/ {
+        proxy_pass ${BACKEND_URL};
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location /nginx-health {
+        access_log off;
+        return 200 "ok";
+    }
+
+    location / {
+        try_files $uri /index.html;
+    }
+}
