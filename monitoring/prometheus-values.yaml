@@ -1,0 +1,18 @@
+# helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n monitoring -f monitoring/prometheus-values.yaml
+prometheus:
+  prometheusSpec:
+    # pick up ServiceMonitors from any namespace/release, not just this chart's own
+    serviceMonitorSelectorNilUsesHelmValues: false
+    retention: 3d
+
+grafana:
+  adminPassword: admin-change-me   # demo only; override with --set grafana.adminPassword=...
+  service:
+    type: ClusterIP
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+
+alertmanager:
+  enabled: false

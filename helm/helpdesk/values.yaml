@@ -1,0 +1,47 @@
+backend:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/OWNER/REPO-backend   # overridden by CI with --set
+    tag: latest
+    pullPolicy: IfNotPresent
+  port: 8000
+  resources:
+    requests: { cpu: 100m, memory: 128Mi }
+    limits: { cpu: 500m, memory: 256Mi }
+
+frontend:
+  replicaCount: 2
+  image:
+    repository: ghcr.io/OWNER/REPO-frontend
+    tag: latest
+    pullPolicy: IfNotPresent
+  port: 8080
+  resources:
+    requests: { cpu: 50m, memory: 32Mi }
+    limits: { cpu: 200m, memory: 64Mi }
+
+postgres:
+  image: postgres:16-alpine
+  database: helpdesk
+  username: helpdesk
+  password: helpdesk-change-me   # demo default; override with --set postgres.password=...
+  storage: 2Gi
+  storageClass: ""
+
+imagePullSecrets: []
+
+ingress:
+  enabled: false
+  className: nginx
+  host: helpdesk.local
+  annotations: {}
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+serviceMonitor:
+  enabled: false   # enable once the Prometheus Operator CRDs exist
+  interval: 15s
