@@ -1,0 +1,7 @@
+# Copy to terraform.tfvars and adjust. Never put AWS credentials here:
+# authenticate with `aws configure` or environment variables instead.
+region       = "ap-south-1"
+project_name = "helpdesk"
+
+# node_instance_types = ["t3.medium"]
+# node_desired_size   = 2
