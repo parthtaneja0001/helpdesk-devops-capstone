@@ -49,9 +49,7 @@ A recorded walkthrough of the full flow: **commit a change → pipeline runs (te
 
 A 24-slide deck that explains the whole project from start to finish in plain language — the app, tests, Docker, CI/CD, Trivy, Terraform, Kubernetes + Helm, monitoring, the problems solved and a module-by-module scorecard — with the screenshots from this README.
 
-> The deck uses the free Google Fonts **Space Grotesk**, **Inter** and **JetBrains Mono** — install them for the intended look (otherwise PowerPoint substitutes a default font).
-
-📊 **[Download the presentation (PPTX)](docs/HelpDesk-DevOps-Capstone.pptx)**
+📊 **[View the presentation (Google Slides)](https://docs.google.com/presentation/d/18HymFh3zIr2ZFKFwc_Utmx2OAnLP575m/edit?usp=sharing)**
 
 ## 3. Architecture
 
