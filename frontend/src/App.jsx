@@ -81,7 +81,7 @@ export default function App() {
           </button>
           <div>
             <h1>Support Tickets</h1>
-            <p className="muted">Track, assign and resolve customer issues faster, together, together faster</p>
+            <p className="muted">Track, assign and resolve customer issues faster, together, every time, together faster</p>
           </div>
           <button className="btn primary" onClick={() => setShowModal(true)}>
             + New ticket
