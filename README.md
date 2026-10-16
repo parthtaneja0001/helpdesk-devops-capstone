@@ -12,6 +12,13 @@ Developer → GitHub → GitHub Actions (pytest, frontend build, Docker build, T
                                                     Prometheus → Grafana
 ```
 
+## Demo
+
+Recorded walkthrough (commit → pipeline → GHCR image → `helm upgrade` on EKS → updated app):
+[Watch the demo](https://drive.google.com/file/d/1akWYIZ53DCBeI_8r9EHGJC3Ik-XkhUro/view?usp=sharing)
+
+Evidence screenshots for every module are in [`docs/screenshots/`](docs/screenshots/).
+
 ## Stack
 
 | Layer | Tech |
