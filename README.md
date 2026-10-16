@@ -8,7 +8,7 @@
 ## Table of contents
 
 1. [What the application does](#1-what-the-application-does)
-2. [Demo video](#2-demo-video)
+2. [Demo video and presentation](#2-demo-video-and-presentation)
 3. [Architecture](#3-architecture)
 4. [Tech stack](#4-tech-stack)
 5. [Repository layout](#5-repository-layout)
@@ -37,13 +37,19 @@ HelpDesk is a support-ticket tracker for a support team. Staff can:
 - filter tickets by status, and
 - see **live KPI cards** (total, open, in progress, resolved, urgent-and-active tickets).
 
-## 2. Demo video
+## 2. Demo video and presentation
 
 A recorded walkthrough of the full flow: **commit a change → pipeline runs (tests, build, Trivy, push) → new SHA-tagged image in GHCR → `helm upgrade` on EKS → updated app in the browser.**
 
 [![Watch the demo](docs/screenshots/08-ingress-browser.png)](https://drive.google.com/file/d/1akWYIZ53DCBeI_8r9EHGJC3Ik-XkhUro/view?usp=sharing)
 
 ▶ **[Watch the demo video](https://drive.google.com/file/d/1akWYIZ53DCBeI_8r9EHGJC3Ik-XkhUro/view?usp=sharing)**
+
+### Project presentation
+
+A 24-slide deck that explains the whole project from start to finish in plain language — the app, tests, Docker, CI/CD, Trivy, Terraform, Kubernetes + Helm, monitoring, the problems solved and a module-by-module scorecard — with the screenshots from this README.
+
+📊 **[Download the presentation (PPTX)](docs/HelpDesk-DevOps-Capstone.pptx)**
 
 ## 3. Architecture
 
