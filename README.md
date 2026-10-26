@@ -39,6 +39,8 @@ HelpDesk is a support-ticket tracker for a support team. Staff can:
 
 ## 2. Demo video and presentation
 
+The video link and the slide deck are also collected in the [`demo/`](demo/) folder.
+
 A recorded walkthrough of the full flow: **commit a change → pipeline runs (tests, build, Trivy, push) → new SHA-tagged image in GHCR → `helm upgrade` on EKS → updated app in the browser.**
 
 [![Watch the demo](docs/screenshots/08-ingress-browser.png)](https://drive.google.com/file/d/1akWYIZ53DCBeI_8r9EHGJC3Ik-XkhUro/view?usp=sharing)
@@ -49,7 +51,7 @@ A recorded walkthrough of the full flow: **commit a change → pipeline runs (te
 
 A 24-slide deck that explains the whole project from start to finish in plain language — the app, tests, Docker, CI/CD, Trivy, Terraform, Kubernetes + Helm, monitoring, the problems solved and a module-by-module scorecard — with the screenshots from this README.
 
-📊 **[View the presentation (Google Slides)](https://docs.google.com/presentation/d/18HymFh3zIr2ZFKFwc_Utmx2OAnLP575m/edit?usp=sharing)**
+📊 **[View the presentation (Google Slides)](https://docs.google.com/presentation/d/18HymFh3zIr2ZFKFwc_Utmx2OAnLP575m/edit?usp=sharing)** · [PPTX in `demo/`](demo/HelpDesk-DevOps-Capstone.pptx)
 
 ## 3. Architecture
 
@@ -100,6 +102,7 @@ k8s/                  namespace.yaml, storageclass-gp3.yaml
 helm/helpdesk/        Helm chart (Chart.yaml, values.yaml, values-dev.yaml, templates/)
 monitoring/           Prometheus/Grafana Helm values + Grafana dashboard ConfigMap
 scripts/              load-test.sh traffic generator
+demo/                 Presentation video link + slide deck (PPTX)
 docs/screenshots/     Evidence screenshots shown in this README
 ```
 
